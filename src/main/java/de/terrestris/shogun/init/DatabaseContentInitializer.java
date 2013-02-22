@@ -263,13 +263,13 @@ public class DatabaseContentInitializer {
 	private void createSuperAdmin() throws ShogunDatabaseAccessException {
 		LOGGER.info("Creating superadmin user");
 		
-		List<Object> allUsers = this.dbDao.getAllEntities(User.class);
+		List<User> allUsers = this.dbDao.getAllEntities(User.class);
 
 		// determine if we hav already a superadmin and save for later
 		User currentSuperAdmin = null;
-		for (Iterator<Object> iterator = allUsers.iterator(); iterator
+		for (Iterator<User> iterator = allUsers.iterator(); iterator
 				.hasNext();) {
-			User user = (User) iterator.next();
+			User user = iterator.next();
 
 			if (user.hasSuperAdminRole() == true) {
 				LOGGER.info("  - We already have a superuser. We possibly need to update.");
@@ -314,13 +314,13 @@ public class DatabaseContentInitializer {
 		if (this.getAutoCreateAnonymousUser()) {
 			LOGGER.info("Creating anonymous user");
 
-			List<Object> allUsers = this.dbDao.getAllEntities(User.class);
+			List<User> allUsers = this.dbDao.getAllEntities(User.class);
 
 			// determine if we already have an anonymous and save for later
 			User anon = null;
-			for (Iterator<Object> iterator = allUsers.iterator(); iterator
+			for (Iterator<User> iterator = allUsers.iterator(); iterator
 					.hasNext();) {
-				User user = (User) iterator.next();
+				User user = iterator.next();
 				if (user.hasAnonymousRole() == true) {
 					anon = user;
 					break;

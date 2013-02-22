@@ -175,7 +175,7 @@ public class ShogunService extends AbstractShogunService {
 			
 			BaseModelInheritance wmsMapLayerInstanceToAdd = (BaseModelInheritance)this.getDatabaseDao().getEntityById(leftEntityId, leftClazz, 0);
 			
-			List<Object> allUsers = this.getDatabaseDao().getAllEntities(rightClazz);
+			List<?> allUsers = this.getDatabaseDao().getAllEntities(rightClazz);
 			
 			List<? extends Object> allnewAssocedUsers = this.getDatabaseDao().getEntitiesByIds(assocications.toArray(), rightClazz);
 			
@@ -368,12 +368,12 @@ public class ShogunService extends AbstractShogunService {
 
 		try {
 			// get Objects from database
-			List<Object> dedicatedModules = this.getDatabaseDao().getAllEntities(Module.class);
+			List<Module> dedicatedModules = this.getDatabaseDao().getAllEntities(Module.class);
 
 			// Cast from Object to Module
 			List<Module> allModules = new ArrayList<Module>(dedicatedModules.size());
-			for (Iterator<Object> iterator = dedicatedModules.iterator(); iterator.hasNext();) {
-				Module module = (Module) iterator.next();
+			for (Iterator<Module> iterator = dedicatedModules.iterator(); iterator.hasNext();) {
+				Module module = iterator.next();
 				allModules.add(module);
 			}
 

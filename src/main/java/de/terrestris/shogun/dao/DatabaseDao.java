@@ -250,7 +250,7 @@ public class DatabaseDao {
 	 * @return The object list fulfilling the filter request
 	 */
 	@SuppressWarnings("unchecked")
-	public List<Object> getAllEntities(Class<?> clazz) {
+	public <T> List<T> getAllEntities(Class<T> clazz) {
 		
 		Criteria criteria = null;
 		criteria = this.sessionFactory.getCurrentSession().createCriteria(clazz);
@@ -258,8 +258,10 @@ public class DatabaseDao {
 		// this ensures that no cartesian product is returned when 
 		// having sub objects, e.g. User <-> Modules
 		criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);
+
+		List<T> allEntities = (List<T>)criteria.list();
 		
-		return criteria.list();
+		return allEntities;
 	}
 	
 	/**
