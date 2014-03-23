@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SHOGun
 
 [![Build Status](https://travis-ci.org/terrestris/shogun.png)](https://travis-ci.org/terrestris/shogun)
@@ -86,3 +87,9 @@ in with the role 'ROLE_SUPERADMIN'.
 
 
 
+=======
+SHOGun website branch (gh-pages)
+================================
+
+This is the branch holding the website sources of the SHOGun project (hosted via github pages)  
+>>>>>>> 3970e199e83f24a26320553d15ce38258a243b3a
