@@ -2,7 +2,6 @@
 layout: post
 title: SHOGun is now also blogging
 ---
-
 Welcome to the brand new SHOGun blog. Here you will find information about current developments within the SHOGun project such as 
   - General information
   - Roadmaps
