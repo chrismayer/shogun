@@ -17,9 +17,11 @@
               <h2 id="project_tagline">SHOGun - a Java based WebGIS framework </h2>
             </header>
         </div>
-
-        <div>
-            <div style="color: #FFF">
+		
+		<div id="main_content_wrap" class="outer">
+			<section id="main_content" class="inner">
+        <p>
+            <div>
                 <h2>{{ page.title }}</h2>
                 <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
                 <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
@@ -28,8 +30,7 @@
 
         <div class="entry">{{ content }}</div>
 
-        <footer><!-- additional info --></footer>
-
+			</section>
         </div>
 
 </body>
