@@ -2,3 +2,5 @@ name: SHOGun
 markdown: redcarpet
 pygments: true
 baseurl: /shogun
+markdown:      kramdown
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
