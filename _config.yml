@@ -1,5 +1,5 @@
 name: SHOGun
-markdown: redcarpet
+#markdown: redcarpet
 pygments: true
 baseurl: /shogun
 markdown: kramdown
