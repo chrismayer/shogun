@@ -12,25 +12,22 @@
         <!-- HEADER -->
         <div id="header_wrap" class="outer">
             <header class="inner">
-
               <h1 id="project_title">SHOGun</h1>
               <h2 id="project_tagline">SHOGun - a Java based WebGIS framework </h2>
             </header>
         </div>
-		
-		<div id="main_content_wrap" class="outer">
-			<section id="main_content" class="inner">
-        <p>
-            <div>
+
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+            <p>
                 <h2>{{ page.title }}</h2>
                 <span><i class="icon-clock"></i><time datetime="{{page.date|date:"%F"}}">{{page.date|date:"%b %d, %Y"}}</time></span><br/>
                 <span class="category"><i class="icon-tag"></i> {{ page.categories | category_links }}</span><br/>
                 <span class="author"><i class="icon-user"></i> {% if page.author %}{{page.author}}{% else %}{{site.author}}{% endif%}</span>
-            </div>
+            </p>
+            <div>{{ content }}</div>
 
-        <div class="entry">{{ content }}</div>
-
-			</section>
+            </section>
         </div>
 
 </body>
